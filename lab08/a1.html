@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        body {
+            background-color: rgb(235, 231, 231);
+            
+        }
+
+        h1, h2 {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: white;
+        }
+
+        p {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .pooper2 {
+            display: inline-block;
+            vertical-align: top;
+            width: 29%;
+            padding: 1%;
+            margin: 1%;
+        }
+
+        .pooper3 {
+            display: inline-block;
+            vertical-align: top;
+            width: 29%;
+            padding: 1%;
+            margin: 1%;
+            text-align: center;
+        }
+
+        #shiteater {
+            width: 200px;
+            padding: 10px;
+
+
+        }
+
+        .superpooper {
+            width: 800px;
+            margin: 0 auto;
+            box-shadow: 0px 5px 18px #888888d2;
+
+            /* rounded corners */
+            border-radius: 25px;
+            background: rgb(122, 122, 122);
+            padding: 20px;
+
+        }
+
+        .iop {
+                color: black;
+                padding-top: 20px;
+                font-size: 1rem;
+            }
+    
+    </style>
+
+    <title>Lab 8: Part 1</title>
+</head>
+
+<body>
+
+    <body onload="fetchData()">
+    <!-- <body> -->
+        <h1>Lab 8 Part 1: Getting XML Data</h1>
+
+        <div class="superpooper">
+
+            <div class="pooper2">
+                <h2>Artist</h2>
+                <p id="artist2"></p>
+            </div>
+            
+            <div class="pooper2">
+                <h2>Title</h2>
+                <p id="title2"></p>
+            </div>
+            
+            <div class="pooper3">
+                <h2>Album Cover</h2>
+                <img id="shiteater" src="" alt="">
+            </div>
+            
+        </div>
+
+        <p class="iop">Note* If the page doesn't load refresh the page. The error happens because the album cover image url provided by the api returns a 403 or 404.</p>
+        <p class="iop">Page will refresh every 5 minutes.</p>
+
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            
+            // referesh page every 5 minutes
+            setInterval(function() {
+                  window.location.reload();
+            }, 300000); 
+
+            let xmlDoc = null; let $xml = null;
+            $.ajax({
+                url: 'http://199.195.194.92:2199/rpc/meyima03/streaminfo.get?x=1',
+                dataType: 'text',
+                success: (data) => {
+                    xmlDoc = $.parseXML(data); $xml = $(xmlDoc);
+
+                },
+                error: (err) => { console.log(err) }
+            });
+          
+            function fetchData() {
+                $s = $xml.find('title'); shit = [];
+                $s.each(function(){
+                    var name = $(this).text();
+                    shit.push(name);
+                });
+
+
+                $s = $xml.find('artist'); shit3 = [];
+                $s.each(function(){
+                    var name = $(this).text();
+                    shit3.push(name);
+                });
+
+                $s = $xml.find('imageurl'); shit5 = [];
+                $s.each(function(){
+                    var name = $(this).text();
+                    shit5.push(name);
+                });
+
+                document.getElementById("artist2").innerHTML = shit3[0];
+
+                document.getElementById("title2").innerHTML = shit[1]
+
+                document.getElementById("shiteater").src = shit5[0]
+
+            }
+
+        </script>
+    </body>
+
+</html>
