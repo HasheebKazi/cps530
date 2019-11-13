@@ -1,0 +1,10 @@
+Lab02 Submission.
+Name: Hasheeb Kazi
+Student No: 500535708
+
+lab01 URL: http://scs.ryerson.ca/~h2kazi/lab02/index.html
+username: Ryerson
+password: secure
+
+
+NOTE* make sure to capitalize R in the username

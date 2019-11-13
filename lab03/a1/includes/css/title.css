@@ -1,0 +1,63 @@
+body {
+    font-size: 10px;
+}
+
+.wrapper {
+    min-width: 600px;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.main__heading {
+    color: rgb(70, 70, 110) !important;
+    font-size: 8rem !important;
+}
+
+.sub__heading {
+    color: rgb(70, 70, 110) !important;
+    font-size: 3rem !important;
+}
+
+.lists {
+    list-style-type: upper-roman !important;
+    font-size: 1.5rem !important;
+}
+
+.notopmargin {
+    margin: 0;
+}
+
+.duedate {
+    color: rgb(245, 95, 95) !important;
+    font-weight: bold !important;
+    font-size: 2rem !important;
+}
+
+@media only screen and (max-width: 800px) {
+    .main__heading {
+        font-size: 5rem !important;
+    }
+    
+    .sub__heading {
+        font-size: 2.5rem !important;
+    }
+    
+    .lists {
+        font-size: 1.2rem !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main__heading {
+        font-size: 4rem !important;
+    }
+    
+    .sub__heading {
+        font-size: 2rem !important;
+    }
+    
+    .lists {
+        font-size: 0.8rem !important;
+    }
+}

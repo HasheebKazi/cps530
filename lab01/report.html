@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Report</title>
+</head>
+<body>
+    
+    <h1>Technical Report for Lab 01</h1>
+    
+    <hr>
+    
+    <div>
+        <h2>HTML Code</h2>
+        <xmp>
+                <!DOCTYPE html>
+                <html lang="en">
+                
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                    <title>CPS530 Lab 01</title>
+                </head>
+                
+                <body>
+                    <h1>Hasheeb Kazi</h1>
+                    <h2>500535798</h2>
+                
+                    <p>Favorite Water Bottle Colors</p>
+                    <ul>
+                        
+                        <li>Red</li>
+                
+                        <li>Red and Black</li>
+                
+                        <li>Red and Blue</li>
+                
+                        <li>Black and Red</li>
+                
+                        <li>Dark Red</li>
+                    </ul>
+                
+                    <figure>
+                        <img src="https://www.ryerson.ca/content/dam/brand/global/images/visual-guide/universitylogo-social-media.jpg"
+                            width="57" height="120" alt="Ryerson University Logo">
+                        <figcaption>My University</figcaption>
+                    </figure>
+                
+                    <footer>
+                        <hr>
+                        <div>
+                            <h3>Validation Report</h3>
+                            <a href="./Validation_results_index.html" rel="nofollow" title="Validate as HTML5">HTML5 Validator</a>
+                        </div>
+                        <div>
+                            <h3>Lab Report</h3>
+                            <a href="./report.html" rel="nofollow" title="Validate as HTML5">HTML5 Validator</a>
+                        </div>
+                        <hr>
+                        <p>All rights Reserved © 2019.</p>
+                    </footer>
+                </body>
+                
+                </html>
+        </xmp>
+        
+    </div>
+    
+    <hr>
+    
+    <div>
+        <h2>Password Protection</h2>
+        <p>To password protect the site I made index.html a login page with a simple form. The form will ask for a username and password and then checks it in the browser once the submit button is clicked. The browser will run a script attached to the page which compares the username and password to preset values. If the information provided matches, you get redirected to the lab01.html page. If there is no match you are prompted to try again.</p>
+        <p>
+            This method is very insecure as a user can simply make a get request for the required page without bothering with the login form. They can also check the client side script to find the correct information.
+        </p>
+    </div>
+    
+    <hr>
+
+    <div>
+        <h2>What new Tag did I try? What was the effect?</h2>
+        <p>I tried the figure tag which is part of the new HTML 5 semantic tags. Using this tag results in a picture properly grouped with a caption. You don't need to use css for the caption to line up under the picture.</p>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>Does your page look different in different browsers and platforms(IE/Edge/Firefox/Chrome/Safari - desktop/tablet/phone)? If yes, what are the main differences?</h2>
+        <p>The page looks different when viewed on Firefox and mobile. The main differences are the styling and position of content. On Firefox the login and index pages look very different, the font, fontsize, spacing for elements and button styling is noticibly diferenet. Additionally the default css on Firefox is much nicer than Chrome. For example the button is larger, has extra spacing and a box shawdow to indicate it is a button.</p>
+        <p>On mobile the page is highly distorted. All the elements are too small to be viewed properly and all elements are spaced vertically which requires additional scrolling.</p>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>How long did you spend on this lab (approximately)?</h2>
+        <p>I spent about 2.5-3 hours on this lab. The first 1.5 hours I was trying to figure out how to host a static page online, looking for services that add default password protection (I couldn't find one). Creating the html pages and writing the report took me another hour and fifteen minutes.</p>
+    
+    </div>
+
+
+</body>
+</html>

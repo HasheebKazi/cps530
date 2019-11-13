@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <h1>
+        Login to access CPS510 Lab 2
+    </h1>
+    <h2>Created By: Hasheeb Kazi</h2>
+    <div>
+        <div>
+            <label style="display: block;" for="username">Username</label>
+            <input type="text" name="username" id="username">
+        </div>
+        <div>
+            <label style="display: block;" for="password">Password</label>
+            <input type="password" name="passowrd" id="password">
+        </div>
+        <div>
+            <label style="display: block;">CLICK LOGIN</label>
+            <button type="submit" id="submit_button">Login</button>
+        </div>
+    </div>
+
+    <script>
+        window.onload = () => {
+            const submit_button = document.getElementById('submit_button');
+            const username = document.getElementById('username');
+            const password = document.getElementById('password');
+    
+            console.log(submit_button);
+    
+            console.log(1);
+            submit_button.addEventListener('click', function(event) {
+                console.log(Math.random()*30);
+                if(username.value.toLowerCase() == 'ryerson' && password.value == 'secure') {
+                    window.location.replace("./lab2.html");
+                } else {
+                    alert('Wrong info');
+                }
+            });
+        }
+    
+    </script>
+
+</body>
+
+</html>

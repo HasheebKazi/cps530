@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: aliceblue;
+}
+
+html {
+    font-size: 10px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    min-width: 100px;
+    max-width: 500px;
+}
+
+.main_heading {
+
+    padding: 0.2rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.main_heading h1 {
+    color: pink;
+}
+
+.id_card {
+    font-size: 2rem;
+    padding: 0.2rem;
+}
+
+article {
+    border: 2px solid hsla(120, 65%, 41%, 0.911);
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+}
+
+article h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+table.info-container {
+    width: 300px;
+    margin: 0 auto 20px auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: green;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+th, td {
+    padding: 0.5rem;
+    font-size: 1,5rem;
+}
+
+footer {
+    margin: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+}
+
+img {
+    margin: 10px auto;
+    padding: 10px;
+}
+

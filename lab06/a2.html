@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <script>
+            const phoneFormat = /^\(?([0-9]{3})\)?[-]([0-9]{3})[-]?([0-9]{4})$/;
+            const addressFormat = /^[A-Za-z0-9. ]+$/;
+            const nameFormat =  /^[A-Za-z ]+$/;
+
+            function checkInputs() {
+                let pnumField = document.forms["info"]["pnum"].value;
+                let nameField = document.forms["info"]["name"].value;
+                let addressField = document.forms["info"]["address"].value;
+                
+                
+                if (nameField == "") {
+                    alert("Please enter a name.");
+                    return false;
+                }
+                if (nameField == null) {
+                    alert("Please enter a name.");
+                    return false;
+                }
+                if (!nameField.match(nameFormat)) {
+                    alert("Names can only contain letters.");
+                    return false;
+                }
+
+
+                if (addressField == "") {
+                    alert("Please enter an address.");
+                    return false;
+                }
+                
+                if (addressField == null) {
+                    alert("Please enter an address.");
+                    return false;
+                }
+
+
+                if (!addressField.match(addressFormat)) {
+                    alert("Please enter a valid address (no special characters e.g !, ~, ], etc...).");
+                    return false;
+                }
+                
+                
+                if (pnumField == null || pnumField == "") {
+                    alert("Please enter a phone number.");
+                    return false;
+                }
+
+                if (!pnumField.match(phoneFormat)) {
+                    alert("Only enter numbers in this format: 123-123-1234");
+                    return false;
+                }
+
+            function func1() {
+                    document.forms['info'].action='http://www2.scs.ryerson.ca/~h2kazi/cgi-bin/lab6form.rb';
+                    document.forms['info'].target='_blank';
+        
+                    document.forms['info'].submit();
+
+                    return true
+
+            }
+
+            func1();
+        }
+
+
+        function func2() {
+                let pnumField = document.forms["info"]["pnum"].value;
+                let nameField = document.forms["info"]["name"].value;
+                let addressField = document.forms["info"]["address"].value;
+                
+                
+                if (nameField == "") {
+                    alert("Please enter a name.");
+                    return false;
+                }
+                if (nameField == null) {
+                    alert("Please enter a name.");
+                    return false;
+                }
+                if (!nameField.match(nameFormat)) {
+                    alert("Names can only contain letters.");
+                    return false;
+                }
+
+
+                if (addressField == "") {
+                    alert("Please enter an address.");
+                    return false;
+                }
+                
+                if (addressField == null) {
+                    alert("Please enter an address.");
+                    return false;
+                }
+
+
+                if (!addressField.match(addressFormat)) {
+                    alert("Please enter a valid address (no special characters e.g !, ~, ], etc...).");
+                    return false;
+                }
+                
+                
+                if (pnumField == null || pnumField == "") {
+                    alert("Please enter a phone number.");
+                    return false;
+                }
+
+                if (!pnumField.match(phoneFormat)) {
+                    alert("Only enter numbers in this format: 123-123-1234");
+                    return false;
+                }
+
+
+
+                 document.forms['info'].action='http://www2.scs.ryerson.ca/~h2kazi/cgi-bin/lab6form.py';
+
+                 document.forms['info'].target='_blank';
+                 document.forms['info'].submit();
+                 return true
+
+                }
+
+    </script>
+
+    <title>Lab 5: Part 1</title>
+</head>
+<body>
+    <h1 stlye="text-align: right;">Lab 6 Form</h1>
+    
+    <form id="infoForm" name="info" style="width: 500px; margin: 0 auto;" method="POST" onsubmit="return checkInputs()">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control" type="text" name="name" id="name" placeholder="Bobby Bob">
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input class="form-control" type="text" name="address" id="address" placeholder="69 420 Street">
+        </div>
+
+        <div class="form-group">
+            <label for="pnum">Phone Number</label>
+            <input class="form-control" type="text" name="pnum" id="pnum" placeholder="416-000-0000">
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit to Ruby CGI SCript</button>    
+        <button onclick="func2()" type="submit" class="btn btn-primary">Submit to Python CGI SCript</button>
+
+
+</form>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

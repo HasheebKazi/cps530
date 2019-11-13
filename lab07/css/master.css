@@ -1,0 +1,108 @@
+/* global styles */
+body {
+    background-color: rgb(197, 197, 197);
+}
+
+h1 {
+    text-align: center;
+}
+
+.wrapper {
+    width: 800px;
+    margin: 0 auto;
+}
+
+/* game board */
+.game-board {
+    background-color: white;
+    width: 800px; 
+    height: 800px;
+    /* position: absolute; */
+
+    position: relative;
+}
+
+.body {
+    background-image: url('http://christopherrosario.github.io/Mr_Potato_Head/assets/body.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-color: blue; */
+    
+    height: 500px;
+    width: 450px;
+
+    position: relative;
+    top: 200px;
+    left: 22%;
+}
+
+.hat {
+    background-image: url('http://www.clker.com/cliparts/c/U/V/Y/m/J/orange-hat-hi.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-color: blue; */
+    
+    height: 250px;
+    width: 300px;
+
+    position: absolute;
+    top: 30px;
+    left: 250px;
+    z-index: 20;
+}
+
+.eyes {
+    background-image: url('https://cdn.pixabay.com/photo/2013/07/13/12/13/eyes-159437__340.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-color: blue; */
+    
+    height: 200px;
+    width: 250px;
+
+    position: absolute;
+    top: 250px;
+    left: 270px;
+    z-index: 21;
+}
+
+.nose {
+    background-image: url('https://i.ya-webdesign.com/images/runny-nose-png-4.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-color: blue; */
+    
+    height: 120px;
+    width: 120px;
+
+    position: absolute;
+    top: 420px;
+    left: 320px;
+    z-index: 22;
+}
+
+.mouth {
+    background-image: url('https://i.pinimg.com/originals/7e/5e/33/7e5e335f9539a7f37757f07f6c4e54f3.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-color: blue; */
+    
+    height: 150px;
+    width: 150px;
+
+    position: absolute;
+    top: 530px;
+    left: 320px;
+    z-index: 21;
+}
+
+/* control panel  */
+.control-panel {
+    text-align: center;
+    margin: 5% auto;
+}
+
+.btn {
+    margin: 10px 10px 10px 10px;
+    width: 10%;
+}

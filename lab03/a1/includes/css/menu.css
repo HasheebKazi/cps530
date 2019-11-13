@@ -1,0 +1,17 @@
+.wrapper {
+    background-color: grey;
+}
+
+.center_1 {
+    text-align: center;
+}
+
+
+.btn-div {
+    width: 60px;
+    margin: 1rem auto;
+}
+
+.btn {
+    width: 60px;
+}

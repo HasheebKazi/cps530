@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CPS530 Lab 04 Part 2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        h1 {
+            font-weight: bold;
+            margin: 2% 0;
+            color: cadetblue;
+        }
+
+        label {
+            font-size: 20px;
+            color: cornflowerblue;
+        }
+
+        textarea {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>CPS530 Lab 4 Part 2</h1>
+        <br>
+        <form method="POST" action="./form.pl">
+    
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" class="form-control" type="text" name="name">
+            </div>
+    
+            <div class="form-group">
+                <label for="job">Job</label>
+                <input id="job" class="form-control" type="text" name="job">
+            </div>
+
+            <div class="form-group">
+                <label for="select">Preferred Car?</label>
+                <select name="select" id="select">
+                    <option value="volvo">Volvo</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="bmw">BMW</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Options?</label>
+                radio: <input type="checkbox" name="c1" id="c1" value="yes">
+            </div>
+
+            <div class="form-group">
+                <label for="ct">Legal Stuff</label>
+
+                <textarea id="ct" rows="10" cols="30" readonly="readonly">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos distinctio possimus voluptate impedit, obcaecati non reiciendis nulla pariatur quisquam at aspernatur itaque harum amet soluta quasi voluptatem maxime dolor, fuga natus odit ab numquam. Voluptatibus dolorum sint non asperiores ad!.</textarea>
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Submit</button>
+                <button class="btn btn-danger" type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

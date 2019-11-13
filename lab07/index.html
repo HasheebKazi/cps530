@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src= 
+        "https://files.codepedia.info/files/uploads/iScripts/html2canvas.js"> 
+    </script>
+    
+    <link rel="stylesheet" href="./css/master.css">
+
+    <title>CPS530 Lab 7</title>
+</head>
+<body>
+    
+    <h1>CPS530 Lab 7: Mr. Potato Head Game</h1>
+
+    <div id="wrapper" class="wrapper">
+        <div id="imageDIV" class="game-board">
+            <div id="body" class="body"></div>
+            <div id="eyes" class="eyes"></div>
+            <div id="nose" class="nose"></div>
+            <div id="mouth" class="mouth"></div>
+            <div id="hat" class="hat"></div>
+        </div>
+
+        <div class="control-panel">
+            <button id="1" class="btn btn-primary">Body</button>
+            <button id="2" class="btn btn-primary">Eyes</button>
+            <button id="3" class="btn btn-primary">Nose</button>
+            <button id="4" class="btn btn-primary">Mouth</button>
+            <button id="5" class="btn btn-primary">Hat</button>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+
+        let hatCounter = 2;
+        let bodyCounter = 0;
+        let eyesCounter = 2;
+        let noseCounter = 2;
+        let mouthCounter = 1;
+
+        const bodyBtn = $("#1");
+        const eyesBtn = $("#2");
+        const noseBtn = $("#3");
+        const mouthBtn = $("#4");
+        const hatBtn = $("#5");
+
+        const hat = $("#hat");
+        const body = $("#body");
+        const eyes = $("#eyes");
+        const nose = $("#nose");
+        const mouth = $("#mouth");
+        
+        bodyBtn.click(function() {
+            bodyCounter = (bodyCounter + 1)%3;
+
+            if (bodyCounter == 0) {
+                body.css("background-image", "url('http://christopherrosario.github.io/Mr_Potato_Head/assets/body.png')");
+            } else if (bodyCounter == 1) {
+                body.css("background-image", "url('https://cdn.pixabay.com/photo/2016/04/01/09/42/onion-1299527_960_720.png')");
+            } else {
+                body.css("background-image", "url('https://pixy.org/download/4288513/')");
+
+            }
+        });
+
+        hatBtn.click(function() {
+            hatCounter = (hatCounter + 1)%4;
+
+            if (hatCounter == 0) {
+                hat.css("background-image", "url('https://i.pinimg.com/originals/4b/b6/bc/4bb6bc9494ab2032f9a0e0815de5bcb8.gif')");
+            } else if (hatCounter == 1) {
+                hat.css("background-image", "url('http://www.clker.com/cliparts/c/U/V/Y/m/J/orange-hat-hi.png')");
+            } else if (hatCounter == 2) {
+                hat.css("background-image", "url('https://4vector.com/i/free-vector-hat-clip-art_104220_Hat_clip_art_hight.png')");
+            } else {
+                hat.css("background-image", "url('http://www.pngall.com/wp-content/uploads/2017/05/Topper-Hat-Download-PNG.png')");
+
+            }
+        });
+
+        eyesBtn.click(function() {
+            eyesCounter = (eyesCounter + 1)%3;
+
+            if (eyesCounter == 0) {
+                eyes.css("background-image", "url('https://i.pinimg.com/originals/fd/bd/56/fdbd56d3174a6b2ca43df35d288d1ad1.png')");
+            } else if (eyesCounter == 1) {
+                eyes.css("background-image", "url('https://cdn.pixabay.com/photo/2013/07/13/12/13/eyes-159437__340.png')");
+            } else {
+                eyes.css("background-image", "url('https://i.pinimg.com/originals/1a/f0/a5/1af0a55300d40507c76f0b9465f61958.png')");
+
+            }
+        });
+
+        noseBtn.click(function() {
+            noseCounter = (noseCounter + 1)%3;
+
+            if (noseCounter == 0) {
+                nose.css("background-image", "url('https://www.emoji.co.uk/files/mozilla-emojis/animals-nature-mozilla/11498-pig-nose.png')");
+            } else if (noseCounter == 1) {
+                nose.css("background-image", "url('https://i.ya-webdesign.com/images/runny-nose-png-4.png')");
+            } else {
+                nose.css("background-image", "url('https://i.pinimg.com/originals/f0/03/4d/f0034dee446dd68f40e0a4960a274cdb.png')");
+
+            }
+        });
+
+        mouthBtn.click(function() {
+            mouthCounter = (mouthCounter + 1)%3;
+
+            if (mouthCounter == 0) {
+                mouth.css("background-image", "url('https://i.pinimg.com/originals/7e/5e/33/7e5e335f9539a7f37757f07f6c4e54f3.png')");
+            } else if (mouthCounter == 1) {
+                mouth.css("background-image", "url('https://i.pinimg.com/originals/b6/77/73/b6777347a6a6ac60fb3e1f6f823a124b.png')");
+            } else {
+                mouth.css("background-image", "url('https://www.searchpng.com/wp-content/uploads/2019/01/Smiling-Mouth-PNG-Clipart--715x715.png')");
+
+            }
+        });
+
+    </script>
+</body>
+</html>
